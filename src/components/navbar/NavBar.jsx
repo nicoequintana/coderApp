@@ -7,7 +7,6 @@ import CartWidget from "./CartWidget";
 
 function NavBar() {
   return (
-    <>
       <Navbar bg="dark" variant="dark">
         <Container>
           <Navbar.Brand href="#home"> <CartWidget /> </Navbar.Brand>
@@ -18,7 +17,6 @@ function NavBar() {
           </Nav>
         </Container>
       </Navbar>
-    </>
   );
 }
 
