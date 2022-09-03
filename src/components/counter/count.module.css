@@ -1,0 +1,61 @@
+.counterContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+}
+
+.counter{
+    display: flex;
+    align-items: center;
+    justify-content: left
+}
+
+.btnCounterAdd, .btnCounterDec{
+    width: 35px;
+    height: 25px;
+    border: none;
+    border-radius: 2.5px;
+    line-height: 50%;
+    padding: 5px;
+    transition: all ease-in-out .2s;    
+}
+
+.btnCounterAdd{
+    background-color: rgba(64, 153, 64, 0.6);
+}
+.btnCounterAdd:hover{
+    background-color: rgb(64, 153, 64);
+    color: white;
+}
+
+.btnCounterDec{
+    background-color: rgba(255, 79, 79, 0.6);
+}
+.btnCounterDec:hover{
+    background-color: rgb(255, 79, 79);
+    color: white;
+}
+
+.countHolder{
+    width: 40px;
+    margin: 0;
+    padding: 5px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.addToCart{
+    width: 110px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 2.5px;
+    background-color: rgba(87, 86, 86, 0.652);
+    color: rgb(167, 167, 167);
+    transition: all ease-in-out .2s;
+
+}
+.addToCart:hover{
+    color: white;
+}

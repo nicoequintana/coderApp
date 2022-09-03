@@ -1,13 +1,21 @@
-import React from "react";
-import s from './itemList.module.css'
+import React, { useEffect, useState } from "react";
+import productsPromise from '../Utils/promises';
+import products from "../Utils/products";
+import ItemList from "./Itemlist";
 
 function ItemListContainer () {
 
+    const [product, setProduct] = useState([]);
+
+    useEffect( () => {
+        productsPromise.then((resp) => 
+        setProduct(resp)
+        ).catch((err) => console.log('Se ha producido un error'))
+    }, []);
+
     return(
-        <div className={s.containerCenter}>
-            <h1 className={s.itemListStyle}>
-                Esto va a ser un ecommerce de Apple
-            </h1>
+        <div>
+            <ItemList prods={product} />
         </div>
     )
 }

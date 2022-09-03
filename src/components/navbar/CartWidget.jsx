@@ -1,13 +1,12 @@
 import React from "react";
-import AppleLogo from '../Assets/apple__logo--navbar.png'
+import cartIcon from '../Assets/cart-icon.svg'
 import s from './navbar.module.css'
 
 function CartWidget () {
 
 
     return(
-
-        <img className={s.cartIcon} src={AppleLogo} alt='logo manzana de Apple'/>
+        <img src={cartIcon} className={s.cartIcon} />
 
     )
 }
