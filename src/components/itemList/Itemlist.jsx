@@ -3,13 +3,16 @@ import Item from "./Item";
 import s from './itemList.module.css';
 
 
-function ItemList ({prods}) {
+function ItemList ({products}) {
 
     return(
-        <div className={s.items}>
-            {prods.map((e)=>(
-                <Item key={e.id}  model={e.Model} memory={e.Memory} price={e.Price}/>
-            ))}
+        <div className="container-fluid">
+            <div className={s.items}>
+                {products.map((e)=>(
+                    <Item key={e.id}  title={e.title} price={e.price} stock={e.available_quantity} img={e.thumbnail}/>
+                ))}
+            
+            </div>
         </div>
     )
 }

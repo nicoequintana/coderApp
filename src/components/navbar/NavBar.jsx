@@ -9,17 +9,19 @@ import NavLogo from "./NavLogo";
 
 function NavBar() {
   return (
-      <Navbar bg="dark" variant="dark">
-        <Container>
-          <Navbar.Brand href="#home"> <NavLogo /> <span className={s.logoText}>Apple</span> </Navbar.Brand>
-          <Nav>
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Products</Nav.Link>
-            <Nav.Link href="#pricing">About Us</Nav.Link>
-            <CartWidget />
-          </Nav>
-        </Container>
-      </Navbar>
+      <div className={s.navFixed}>
+        <Navbar bg="dark" variant="dark" className='container-fluid'>
+          <Container>
+            <Navbar.Brand href="#home"> <NavLogo /> <span className={s.logoText}>Apple</span> </Navbar.Brand>
+            <Nav>
+              <Nav.Link href="#home">Home</Nav.Link>
+              <Nav.Link href="#features">Products</Nav.Link>
+              <Nav.Link href="#pricing">About Us</Nav.Link>
+              <CartWidget />
+            </Nav>
+          </Container>
+        </Navbar>
+      </div>
   );
 }
 

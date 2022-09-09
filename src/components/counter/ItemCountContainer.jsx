@@ -2,9 +2,7 @@ import React, { useState } from "react";
 import ItemCount from "./ItemCount";
 
 
-function ItemCountContainer () {
-//NO OLVIDAR: como paso el stock de cada producto al counter? (problema de logica)
-    const [stock, setStock] = useState (5);
+function ItemCountContainer ({stock}) {
     const [count, setCount] = useState (0);
 
     function add () {

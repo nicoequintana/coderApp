@@ -1,21 +1,30 @@
 import React, { useEffect, useState } from "react";
-import productsPromise from '../Utils/promises';
-import products from "../Utils/products";
+import s from './itemList.module.css';
+//import products from "../Utils/products";
 import ItemList from "./Itemlist";
 
 function ItemListContainer () {
-
-    const [product, setProduct] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [products, setProduct] = useState([]);
 
     useEffect( () => {
-        productsPromise.then((resp) => 
-        setProduct(resp)
-        ).catch((err) => console.log('Se ha producido un error'))
+        setTimeout( () => {
+            fetch('https://api.mercadolibre.com/sites/MLA/search?q=iphone')
+            .then((res)=>res.json())
+            .then((data) => {
+                //console.log(data.results)
+                setProduct(data.results)
+            })
+            .catch((err) => err)
+            .finally(()=>{setLoading(false)})
+        }, 3000)
+
+
     }, []);
 
     return(
-        <div>
-            <ItemList prods={product} />
+        <div className={s.itemListContainer}>
+            {loading ? <h1 className={s.loader}> Estamos cargando el sitio, <br /> por favor espera.</h1> :  <ItemList products={products} />}
         </div>
     )
 }
