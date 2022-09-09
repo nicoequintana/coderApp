@@ -13,7 +13,7 @@ function Item ({title, price, stock, thumbnail}) {
                     <p className={s.item_model}>{title}</p>
                     <p className={s.item_price}>${price}</p>
                 </div>
-                <ItemCountContainer stock={stock}/>
+                {/* <ItemCountContainer stock={stock}/> */}
             </div>
         </div>
     )
