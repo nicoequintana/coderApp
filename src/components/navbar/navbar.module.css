@@ -1,10 +1,20 @@
 .navFixed{
     width: 100%;
-    background-color: rgb(33,37,41);
+    height: inherit;
     position: fixed;
     left: 0;
     top: 0;
     box-shadow: 0px 0px 8px black;
+    z-index: 1000;
+}
+
+.linkStyle{
+    text-decoration: none;
+    color: rgba(231, 231, 231, 0.551);
+    transition: all ease-out .2s;
+}
+.linkStyle:hover{
+    color: rgb(255, 255, 255);
 }
 
 .cartIcon {

@@ -9,7 +9,7 @@ function ItemList ({products}) {
         <div className="container-fluid">
             <div className={s.items}>
                 {products.map((e)=>(
-                    <Item key={e.id}  title={e.title} price={e.price} stock={e.available_quantity} img={e.thumbnail}/>
+                    <Item key={e.id} id={e.id} title={e.title} price={e.price} stock={e.available_quantity} thumbnail={e.thumbnail}/>
                 ))}
             
             </div>

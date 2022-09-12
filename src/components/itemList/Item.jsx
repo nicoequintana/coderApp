@@ -1,19 +1,19 @@
 import React from "react";
 import s from './itemList.module.css';
-import ItemCountContainer from '../counter/ItemCountContainer';
+import { Link } from "react-router-dom";
 
-function Item ({title, price, stock, thumbnail}) {
+function Item ({id, title, price, stock, thumbnail}) {
     return(
         <div>
             <div className={s.card}>
                 <div className={s.card_img}>
-                    <img alt='imagen representativa del telefono' src={thumbnail} className={s.item_img}/>
+                    <Link to={'/products/' + id}><img alt='imagen representativa del telefono' src={thumbnail} className={s.item_img}/></Link>
                 </div>
                 <div className={s.item_info}>
                     <p className={s.item_model}>{title}</p>
                     <p className={s.item_price}>${price}</p>
+                    <p>Stock Disponible: {stock}</p>
                 </div>
-                {/* <ItemCountContainer stock={stock}/> */}
             </div>
         </div>
     )

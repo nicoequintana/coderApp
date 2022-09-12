@@ -1,0 +1,12 @@
+.footerContainer{
+    width: 100%;
+    height: 50px;
+    padding: 15px;
+    background-color: black;
+}
+
+.footerCopy{
+    font-weight: 14px;
+    color: whitesmoke;
+    text-align: center;
+}

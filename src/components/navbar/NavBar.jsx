@@ -6,17 +6,18 @@ import s from './navbar.module.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CartWidget from "./CartWidget";
 import NavLogo from "./NavLogo";
+import { Link } from "react-router-dom";
 
 function NavBar() {
   return (
-      <div className={s.navFixed}>
-        <Navbar bg="dark" variant="dark" className='container-fluid'>
+      <div className={s.navFixed} bg='black'>
+        <Navbar bg="black" variant="dark" className='container-fluid'>
           <Container>
-            <Navbar.Brand href="#home"> <NavLogo /> <span className={s.logoText}>Apple</span> </Navbar.Brand>
+            <Navbar.Brand href="#home"> <NavLogo /> <span className={s.logoText}>IStore</span> </Navbar.Brand>
             <Nav>
-              <Nav.Link href="#home">Home</Nav.Link>
-              <Nav.Link href="#features">Products</Nav.Link>
-              <Nav.Link href="#pricing">About Us</Nav.Link>
+              <Nav.Link> <Link className={s.linkStyle} to='/'> Home </Link> </Nav.Link>
+              <Nav.Link> <Link className={s.linkStyle} to='/products/'> Products </Link></Nav.Link>
+              <Nav.Link> <Link className={s.linkStyle} to='/'> About Us </Link> </Nav.Link>
               <CartWidget />
             </Nav>
           </Container>

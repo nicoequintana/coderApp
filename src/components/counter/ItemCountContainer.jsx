@@ -3,7 +3,7 @@ import ItemCount from "./ItemCount";
 
 
 function ItemCountContainer ({stock}) {
-    const [count, setCount] = useState (0);
+    const [count, setCount] = useState (1);
 
     function add () {
         if(count < stock){

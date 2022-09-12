@@ -1,0 +1,118 @@
+.mainContainer{
+    width: 100%;
+    height: 100%;
+    margin: 56px auto 0;
+    background-color: rgb(31, 37, 41);
+}
+
+.carouselImgContainer{
+    height: 600px;
+}
+
+.carouselImgContainer img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carouselContainer{
+    box-shadow: 0px 0px 8px black;
+    margin-bottom: 3rem;
+}
+
+.mainContent{
+    width: 100%;
+
+}
+
+.mainContentWrap{
+    width: 90%;
+    margin: 0 auto 3rem;
+    padding: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.infoContentImg{
+    width: 50%;
+    height: 480px;
+}
+
+.infoContentImg img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(-8px 8px 10px rgb(55, 60, 103));
+}
+
+.infoContentText{
+    width: 50%;
+}
+
+.infoContentText{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: whitesmoke;
+}
+
+.infoContentText h3{
+    margin-bottom: 2rem;
+    font-size: 35px;
+    text-align: center;
+    font-weight: bolder;
+    text-shadow: 0px 0px 4px rgb(122, 120, 182);
+}
+
+.infoContentText p{
+    text-align: justify;
+    font-weight: lighter;
+}
+
+.mapContainer{
+    width: 100%;
+    height: 400px;
+    margin-bottom: 1.5rem;
+}
+
+.mapContainer iframe{
+    width: 100%;
+    height: 100%;
+}
+
+.ourPlacementInfo{
+    width: 350px;
+    height: 100%;
+    padding: 10px;
+    margin: 0 auto;
+    color: whitesmoke;
+
+}
+
+.ourPlacementInfo h3{
+    font-size: 22px;
+    text-align: center;
+    font-weight: bolder;
+    text-shadow: 0px 0px 4px rgb(122, 120, 182);
+    margin-bottom: 1rem;
+}
+
+.ourPlacementInfo p{
+    font-size: 15px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+

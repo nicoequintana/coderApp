@@ -15,9 +15,9 @@ function ItemListContainer () {
                 //console.log(data.results)
                 setProduct(data.results)
             })
-            .catch((err) => err)
+            .catch((err) => console.log(err))
             .finally(()=>{setLoading(false)})
-        }, 3000)
+        }, 500)
 
 
     }, []);
