@@ -12,10 +12,10 @@ function App() {
     <BrowserRouter>
     <NavBar />
       <Routes>
-        <Route exact path='/' element={<Home />} />
+        <Route exact path='/' element={<Home category={'iphone'} />} />
         <Route path='/aboutus' element={<AboutUs />} />
         <Route path='/products/:category' element={<ItemListContainer />} />
-        <Route path='/products/:id' element={<ItemDetailContainer />} />
+        <Route path='/items/:id' element={<ItemDetailContainer />} />
       </Routes>
     <Footer />
     </BrowserRouter>

@@ -6,7 +6,7 @@ import ItemDetail from './ItemDetail'
 
 function ItemDetailContainer() {
 
-    const [product, setProduct] = useState([]);
+    const [product, setProduct] = useState({});
     const {id} = useParams()
 
     console.log(id)
@@ -16,9 +16,8 @@ function ItemDetailContainer() {
         .then((res)=>res.json())
         .then((data) => {
             console.log(data) //no lo veo en consola. No se levanta el componente
-            const item = data.find((prod) => prod.id === id)
-            
-            setProduct(item)
+            // const item = data.find((prod) => prod.id === id)
+            setProduct(data)
         })
         .catch((err)=>console.log(err))
     }, [id])

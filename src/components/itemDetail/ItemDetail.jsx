@@ -7,7 +7,7 @@ import ItemCountContainer from '../counter/ItemCountContainer';
 function ItemDetail({product}) {
 
   return (
-    <div>
+    <div className={s.itemDetailContainer}>
         <div className={s.itemDetail}>
           <div className={s.itemDetail_thumbnailContainer}>
             <div className={s.itemDetail_thumbnail}>

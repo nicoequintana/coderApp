@@ -13,7 +13,7 @@ function NavBar() {
       <div className={s.navFixed} bg='black'>
         <Navbar bg="black" variant="dark" className='container-fluid'>
           <Container>
-            <Navbar.Brand href="#home"> <NavLogo /> <span className={s.logoText}>iStore</span> </Navbar.Brand>
+            <Navbar.Brand> <Link className={s.linkStyle} to={'/'}><NavLogo /> <span className={s.logoText}>iStore</span></Link>  </Navbar.Brand>
             <Nav>
                <Link className={s.linkStyle} to='/'> Home </Link> 
                <Link className={s.linkStyle} to='/products/iphone/'> iPhone </Link> 

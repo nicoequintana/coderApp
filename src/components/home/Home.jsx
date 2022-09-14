@@ -1,9 +1,11 @@
 import React from 'react'
+import ItemDetailContainer from '../itemDetail/ItemDetailContainer';
+import ItemListContainer from '../itemList/ItemListContainer';
 import CarouselBS from './CarouselBS';
 import s from './homeStyles.module.css';
 
 
-function Home() {
+function Home({category}) {
   return (
     <div className={s.mainContainer}>
         <div className={s.carouselContainer}>
@@ -40,6 +42,9 @@ function Home() {
             </div>
 
         </section>
+
+        <ItemListContainer />
+        
     </div>
   )
 }
