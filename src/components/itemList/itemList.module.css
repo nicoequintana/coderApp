@@ -68,3 +68,23 @@
 .item_model{
     font-weight: bold;
 }
+
+.btnMoreInformation{
+    width: 250px;
+    padding: 8px;
+    background-color: rgb(197, 197, 197);
+    color: rgb(20, 20, 88);
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    box-shadow: -5px 6px 8px grey;
+    transition: all ease-out .2s;
+
+}
+
+.btnMoreInformation:hover{
+    box-shadow: 0px 0px 4px rgb(69, 69, 69);
+    background-color: rgb(71, 71, 71);
+    color: rgb(239, 239, 239);
+
+}

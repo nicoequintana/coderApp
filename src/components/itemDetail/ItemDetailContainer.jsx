@@ -7,10 +7,10 @@ import ItemDetail from './ItemDetail'
 function ItemDetailContainer() {
 
     const [product, setProduct] = useState([]);
-    const {id} = useParams()
+    const {category, id} = useParams();
 
     useEffect(() => {
-        fetch('https://api.mercadolibre.com/sites/MLA/search?q=iphone')
+        fetch(`https://api.mercadolibre.com/sites/MLA/search?q=${category}`)
         .then((res)=>res.json())
         .then((data) => {
             console.log(data.results)
@@ -19,7 +19,7 @@ function ItemDetailContainer() {
             setProduct(item)
         })
         .catch((err)=>console.log(err))
-    }, [id])
+    }, [category, id])
 
 
   return (

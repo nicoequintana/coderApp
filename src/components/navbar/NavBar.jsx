@@ -13,10 +13,11 @@ function NavBar() {
       <div className={s.navFixed} bg='black'>
         <Navbar bg="black" variant="dark" className='container-fluid'>
           <Container>
-            <Navbar.Brand href="#home"> <NavLogo /> <span className={s.logoText}>IStore</span> </Navbar.Brand>
+            <Navbar.Brand href="#home"> <NavLogo /> <span className={s.logoText}>iStore</span> </Navbar.Brand>
             <Nav>
               <Nav.Link> <Link className={s.linkStyle} to='/'> Home </Link> </Nav.Link>
-              <Nav.Link> <Link className={s.linkStyle} to='/products/'> Products </Link></Nav.Link>
+              <Nav.Link> <Link className={s.linkStyle} to='/products/Iphones/'> iPhones </Link></Nav.Link>
+              <Nav.Link> <Link className={s.linkStyle} to='/products/FundasIphone/'> Cases </Link></Nav.Link>
               <Nav.Link> <Link className={s.linkStyle} to='/'> About Us </Link> </Nav.Link>
               <CartWidget />
             </Nav>

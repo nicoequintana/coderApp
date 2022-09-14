@@ -21,13 +21,13 @@ function ItemCountContainer ({stock}) {
         }
     }
 
-    function addToCart () {
+    function onAdd () {
         alert(`Agregaste ${count} a tu carrito`)
     }
 
     return(
         <div>
-            <ItemCount count={count} add={add} dec={dec} addToCart={addToCart}/>
+            <ItemCount count={count} add={add} dec={dec} onAdd={onAdd}/>
         </div>
     )
 }
