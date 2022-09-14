@@ -15,10 +15,10 @@ function NavBar() {
           <Container>
             <Navbar.Brand href="#home"> <NavLogo /> <span className={s.logoText}>iStore</span> </Navbar.Brand>
             <Nav>
-              <Nav.Link> <Link className={s.linkStyle} to='/'> Home </Link> </Nav.Link>
-              <Nav.Link> <Link className={s.linkStyle} to='/products/Iphones/'> iPhones </Link></Nav.Link>
-              <Nav.Link> <Link className={s.linkStyle} to='/products/FundasIphone/'> Cases </Link></Nav.Link>
-              <Nav.Link> <Link className={s.linkStyle} to='/'> About Us </Link> </Nav.Link>
+               <Link className={s.linkStyle} to='/'> Home </Link> 
+               <Link className={s.linkStyle} to='/products/iphone/'> iPhone </Link> 
+               <Link className={s.linkStyle} to='/products/fundaiphone/'> Cases </Link> 
+               <Link className={s.linkStyle} to='/'> About Us </Link> 
               <CartWidget />
             </Nav>
           </Container>

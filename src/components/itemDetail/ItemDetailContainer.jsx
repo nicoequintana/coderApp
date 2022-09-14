@@ -7,19 +7,21 @@ import ItemDetail from './ItemDetail'
 function ItemDetailContainer() {
 
     const [product, setProduct] = useState([]);
-    const {category, id} = useParams();
+    const {id} = useParams()
+
+    console.log(id)
 
     useEffect(() => {
-        fetch(`https://api.mercadolibre.com/sites/MLA/search?q=${category}`)
+        fetch(`https://api.mercadolibre.com/items/${id}`)
         .then((res)=>res.json())
         .then((data) => {
-            console.log(data.results)
-            const item = data.results.find((prod) => prod.id === id)
-            console.log(item)
+            console.log(data) //no lo veo en consola. No se levanta el componente
+            const item = data.find((prod) => prod.id === id)
+            
             setProduct(item)
         })
         .catch((err)=>console.log(err))
-    }, [category, id])
+    }, [id])
 
 
   return (

@@ -7,7 +7,7 @@ import { useParams } from "react-router-dom";
 function ItemListContainer () {
     const [loading, setLoading] = useState(true);
     const [products, setProducts] = useState([]);
-    const{category} = useParams()
+    const {category} = useParams()
 
     useEffect( () => {
         setTimeout( () => {
@@ -15,8 +15,6 @@ function ItemListContainer () {
             fetch(`https://api.mercadolibre.com/sites/MLA/search?q=${category}`)
             .then((res)=>res.json())
             .then((data) => {
-                console.log(data.results)
-
                 setProducts(data.results)
             })
             .catch((err) => console.log(err))
@@ -25,7 +23,7 @@ function ItemListContainer () {
 
         }, 500)
 
-    }, []);
+    }, [category]);
 
 
 
