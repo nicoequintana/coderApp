@@ -8,19 +8,23 @@ import CartWidget from "./CartWidget";
 import NavLogo from "./NavLogo";
 import { Link } from "react-router-dom";
 
-function NavBar() {
+function NavBar({categories}) {
   return (
       <div className={s.navFixed} bg='black'>
         <Navbar bg="black" variant="dark" className='container-fluid'>
           <Container>
-            <Navbar.Brand> <Link className={s.linkStyle} to={'/'}><NavLogo /> <span className={s.logoText}>iStore</span></Link>  </Navbar.Brand>
+            <Navbar.Brand className={s.navbarBrand}> 
+              <Link className={s.linkStyle} to={'/'}>
+                <NavLogo /> 
+                <span className={s.logoText}>iStore</span>
+              </Link>  
+            </Navbar.Brand>
             <Nav>
-               <Link className={s.linkStyle} to='/'> Home </Link> 
-               <Link className={s.linkStyle} to='/products/iphone/'> iPhone </Link> 
-               <Link className={s.linkStyle} to='/products/fundaiphone/'> Cases </Link> 
-               <Link className={s.linkStyle} to='/'> About Us </Link> 
-              <CartWidget />
+              <ul className={s.navListStyle}>
+                {categories.map(e => <li key={e.link + e.name}> <Link className={s.linkStyle} to={e.link}>{e.name}</Link> </li>)}
+              </ul>
             </Nav>
+            <CartWidget />
           </Container>
         </Navbar>
       </div>

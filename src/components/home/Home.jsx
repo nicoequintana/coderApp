@@ -1,11 +1,10 @@
 import React from 'react'
-import ItemDetailContainer from '../itemDetail/ItemDetailContainer';
-import ItemListContainer from '../itemList/ItemListContainer';
 import CarouselBS from './CarouselBS';
+import ItemListContainer from '../itemList/ItemListContainer';
 import s from './homeStyles.module.css';
 
 
-function Home({category}) {
+function Home() {
   return (
     <div className={s.mainContainer}>
         <div className={s.carouselContainer}>
@@ -30,7 +29,7 @@ function Home({category}) {
             {/* info about our placement */}
 
             <div className={s.mapContainer}>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.6263076255723!2d-58.41294568494821!3d-34.588320980463536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca83d2aa1521%3A0xc7a941fe0d021ba0!2sAlto%20Palermo!5e0!3m2!1sen!2sar!4v1662843379458!5m2!1sen!2sar"></iframe>
+                <iframe title='Mapa ubicacion del local fisico' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.6263076255723!2d-58.41294568494821!3d-34.588320980463536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca83d2aa1521%3A0xc7a941fe0d021ba0!2sAlto%20Palermo!5e0!3m2!1sen!2sar!4v1662843379458!5m2!1sen!2sar"></iframe>
             </div>
             <div className={s.ourPlacementInfo}>
                 <h3> Veni a visitarnos al <br /> Alto Palermo</h3>
