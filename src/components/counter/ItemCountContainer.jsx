@@ -4,6 +4,7 @@ import ItemCount from "./ItemCount";
 
 function ItemCountContainer ({stock}) {
     const [count, setCount] = useState (1);
+    const [validateShopping, setValidateShopping] = useState(false)
 
     function add () {
         if(count < stock){
@@ -14,7 +15,7 @@ function ItemCountContainer ({stock}) {
     }
 
     function dec () {
-        if(count >= 1) {
+        if(count > 1) {
             setCount(count - 1)
         } else {
             alert('Ya no quedan productos por sacar')
@@ -22,12 +23,15 @@ function ItemCountContainer ({stock}) {
     }
 
     function onAdd () {
-        alert(`Agregaste ${count} a tu carrito`)
+        setValidateShopping(true);
+        alert(`Agregaste ${count} articulo/s a tu carrito`);
+        
+
     }
 
     return(
         <div>
-            <ItemCount count={count} add={add} dec={dec} onAdd={onAdd}/>
+            <ItemCount count={count} add={add} dec={dec} onAdd={onAdd} validate={validateShopping}/>
         </div>
     )
 }
