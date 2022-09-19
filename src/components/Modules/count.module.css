@@ -60,3 +60,10 @@
 .addToCart:hover{
     color: white;
 }
+
+.btnGoToCart{
+    width: auto;
+    padding: 5px;
+    background: green;
+    color: whitesmoke;
+}

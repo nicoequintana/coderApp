@@ -1,5 +1,5 @@
 import Carousel from 'react-bootstrap/Carousel';
-import s from './homeStyles.module.css'
+import s from '../Modules/homeStyles.module.css'
 
 function CarouselBS() {
   return (

@@ -1,7 +1,7 @@
 import React from "react";
-import s from './count.module.css'
+import s from '../Modules/count.module.css'
 
-function ItemCount ({count, add, dec, onAdd, validate}) {
+function ItemCount ({stock, count, add, dec, onAdd}) {
     return(
         <div className={s.counterContainer}>
             <div className={s.counter}>
@@ -9,7 +9,9 @@ function ItemCount ({count, add, dec, onAdd, validate}) {
                 <p className={s.countHolder}>{count}</p>
                 <button className={s.btnCounterAdd} onClick={() => {add()}}>+</button>
             </div>
-                {validate ? <button className={s.addToCart}>Agegado!</button> : <button className={s.addToCart} onClick={() => {onAdd()}}>Agregar</button> }
+            <button className={s.addToCart} onClick={() => {onAdd()}}>
+                Agregar
+            </button>
                 
         </div>
     )

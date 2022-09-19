@@ -1,11 +1,14 @@
 import React, { useState } from "react";
-import ItemCount from "./ItemCount";
+import ItemCount from '../counter/ItemCount';
 
-
-function ItemCountContainer ({stock}) {
+function ItemCountContainer ({stock, onAdd}) {
     const [count, setCount] = useState (1);
-    const [validateShopping, setValidateShopping] = useState(false)
+    //const [validateShopping, setValidateShopping] = useState(false)
+    
+    //este console.log me tira undefined
+    //console.log(stock)
 
+    
     function add () {
         if(count < stock){
             setCount(count + 1);
@@ -22,17 +25,10 @@ function ItemCountContainer ({stock}) {
         }
     }
 
-    function onAdd () {
-        setValidateShopping(true);
-        alert(`Agregaste ${count} articulo/s a tu carrito`);
-        
 
-    }
 
     return(
-        <div>
-            <ItemCount count={count} add={add} dec={dec} onAdd={onAdd} validate={validateShopping}/>
-        </div>
+        <ItemCount stock={stock} count={count} onAdd={onAdd} add={add} dec={dec}/>
     )
 }
 

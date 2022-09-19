@@ -1,7 +1,6 @@
 import React from 'react'
 import CarouselBS from './CarouselBS';
-import ItemListContainer from '../itemList/ItemListContainer';
-import s from './homeStyles.module.css';
+import s from '../Modules/homeStyles.module.css';
 
 
 function Home() {
@@ -41,8 +40,6 @@ function Home() {
             </div>
 
         </section>
-
-        <ItemListContainer />
         
     </div>
   )

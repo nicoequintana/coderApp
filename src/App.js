@@ -3,8 +3,8 @@ import {BrowserRouter, Routes, Route} from "react-router-dom";
 import AboutUs from "./components/AboutUs";
 import Footer from "./components/footer/Footer";
 import Home from "./components/home/Home";
-import ItemDetailContainer from "./components/itemDetail/ItemDetailContainer";
-import ItemListContainer from "./components/itemList/ItemListContainer";
+import ItemDetailContainer from "./components/Containers/ItemDetailContainer";
+import ItemListContainer from "./components/Containers/ItemListContainer";
 import NavSetup from "./components/navbar/NavSetup";
 
 function App() {

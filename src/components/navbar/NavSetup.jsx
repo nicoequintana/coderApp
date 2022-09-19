@@ -3,7 +3,7 @@ import NavBar from './NavBar'
 
 function NavSetup() {
 
-    const categories = [{name: 'Home', link: '/'}, {name: 'Iphones', link: '/products/iphone/'}, {name:'Cases', link:'/products/fundasIphone'}, {name:'About Us', link:'/'}]
+    const categories = [{name: 'Home', link: '/'}, {name: 'Iphones', link: '/products/iphone/'}, {name:'Cases', link:'/products/fundasIphone'}, {name:'About Us', link:'/aboutus'}]
 
   return (
     <div>

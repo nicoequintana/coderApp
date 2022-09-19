@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import s from './itemList.module.css';
+import s from '../Modules/itemList.module.css';
 //import products from "../Utils/products";
-import ItemList from "./Itemlist";
+import ItemList from "../itemList/Itemlist";
 import { useParams } from "react-router-dom";
 
 function ItemListContainer () {
@@ -15,6 +15,7 @@ function ItemListContainer () {
             fetch(`https://api.mercadolibre.com/sites/MLA/search?q=${category}`)
             .then((res)=>res.json())
             .then((data) => {
+                console.log(data.results)
                 setProducts(data.results)
             })
             .catch((err) => console.log(err))
@@ -24,7 +25,6 @@ function ItemListContainer () {
         }, 500)
 
     }, [category]);
-
 
 
     return(

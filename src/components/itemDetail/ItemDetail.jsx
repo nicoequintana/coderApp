@@ -1,10 +1,17 @@
-import React from 'react';
-import s from './itemDetail.module.css';
-import ItemCountContainer from '../counter/ItemCountContainer';
+import React, { useState } from 'react';
+import s from '../Modules/itemDetail.module.css';
+import ItemCountContainer from '../Containers/ItemCountContainer';
+import AddToCart from '../counter/AddToCart';
 
 
 
 function ItemDetail({product}) {
+  const [validateShopping, setValidateShopping] = useState(false)
+
+  function onAdd () {
+    setValidateShopping(true);
+    
+}
 
   return (
     <div className={s.itemDetailContainer}>
@@ -34,7 +41,8 @@ function ItemDetail({product}) {
             {/* <p>Categoria del Vendedor: {product.seller_reputation.power_seller_status}</p> */}
             <p>Precio: ${product.price}</p>
             <p>Stock Disponible: {product.available_quantity}</p>
-            <ItemCountContainer stock={product.available_quantity}/>
+            {validateShopping ? <AddToCart /> : <ItemCountContainer onAdd={onAdd} stock={product.available_quantity}/>}
+            {console.log(product.available_quantity)}
           </div>
         </div>
     </div>
