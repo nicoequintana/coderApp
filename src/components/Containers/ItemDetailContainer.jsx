@@ -1,27 +1,28 @@
-import {React, useEffect, useState} from 'react'
-import { useParams } from 'react-router-dom'
-import ItemDetail from '../itemDetail/ItemDetail'
+import {React, useEffect, useState} from 'react';
+import { useParams } from 'react-router-dom';
+import ItemDetail from '../itemDetail/ItemDetail';
+import articles from '../Utils/products';
 
 
 
 function ItemDetailContainer() {
 
-    const [product, setProduct] = useState({});
+    const [article, setArticle] = useState({});
     const {id} = useParams()
 
     useEffect(() => {
-        fetch(`https://api.mercadolibre.com/items/${id}`)
-        .then((res)=>res.json())
-        .then((data) => {
-            setProduct(data)
-        })
-        .catch((err)=>console.log(err))
+      const promiseProduct = new Promise ((res, rej) => {
+        setTimeout(()=>{
+          res(articles)
+        }, 0)
+      })
+      promiseProduct.then(resp => setArticle(resp => articles.find(articles => articles.id === id)))
     }, [id])
 
 
   return (
     <div>
-        <ItemDetail product={product} />
+        <ItemDetail article={article} />
     </div>
   )
 }

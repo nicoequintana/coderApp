@@ -11,7 +11,7 @@ function Item ({id, title, price, stock, thumbnail}) {
                     <Link to={'/items/' + id}><img alt='imagen representativa del telefono' src={thumbnail} className={s.item_img}/></Link>
                 </div>
                 <div className={s.item_info}>
-                    <p className={s.item_model}>{id}</p>
+                    {/* <p className={s.item_model}>{id}</p> */}
                     <p className={s.item_model}>{title}</p>
                     <p className={s.item_price}>${price}</p>
                     <p>Stock Disponible: {stock}</p>

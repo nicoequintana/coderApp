@@ -5,6 +5,8 @@ export const Cart = createContext();
 const CartProvider = ({children}) => {
 
 
+ 
+
     return(
         <Cart.Provider>
             {children}
