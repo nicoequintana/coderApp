@@ -5,7 +5,7 @@ import s from '../Modules/count.module.css'
 function AddToCart() {
   return (
     <>
-        <Link to={'/'}><button className={s.btnGoToCart}>Ir a tu carrito de compras.</button></Link>
+        <Link to={'/cart'}><button className={s.btnGoToCart}>Ir a tu carrito de compras.</button></Link>
     </>
   )
 }
