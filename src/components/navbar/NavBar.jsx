@@ -24,7 +24,7 @@ function NavBar({categories}) {
                 {categories.map(e => <li key={e.link + e.name}> <Link className={s.linkStyle} to={e.link}>{e.name}</Link> </li>)}
               </ul>
             </Nav>
-            <CartWidget />
+            <Link to={'/cart/'}><CartWidget /></Link>
           </Container>
         </Navbar>
       </div>
