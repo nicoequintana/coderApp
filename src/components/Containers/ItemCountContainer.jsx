@@ -1,34 +1,28 @@
 import React, { useState } from "react";
-import ItemCount from '../counter/ItemCount';
+import s from '../Modules/count.module.css'
 
-function ItemCountContainer ({stock, onAdd}) {
-    const [count, setCount] = useState (1);
-    //const [validateShopping, setValidateShopping] = useState(false)
-    
-    //este console.log me tira undefined
-    //console.log(stock)
-
+function ItemCountContainer ({stock, onAdd, initial}) {
+    const [count, setCount] = useState (initial);
     
     function add () {
-        if(count < stock){
-            setCount(count + 1);
-        } else {
-            alert('Maximo de productos posible')
-        }
+        count < stock && setCount(count + 1)
     }
 
     function dec () {
-        if(count > 1) {
-            setCount(count - 1)
-        } else {
-            alert('Ya no quedan productos por sacar')
-        }
+        count > initial && setCount(count - 1)
     }
 
 
 
     return(
-        <ItemCount stock={stock} count={count} onAdd={onAdd} add={add} dec={dec}/>
+        <div className={s.counterContainer}>
+            <div className={s.counter}>
+                <button className={s.btnCounterDec} onClick={() => {dec()}}>-</button>
+                <p className={s.countHolder}>{count}</p>
+                <button className={s.btnCounterAdd} onClick={() => {add()}}>+</button>
+            </div>
+            <button className={s.addToCart} onClick={() => onAdd(count)}>Agregar</button>
+        </div>
     )
 }
 

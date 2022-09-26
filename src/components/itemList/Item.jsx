@@ -16,7 +16,7 @@ function Item ({id, title, price, stock, thumbnail}) {
                     <p className={s.item_price}>${price}</p>
                     <p>Stock Disponible: {stock}</p>
                 </div>
-                <Link to={'/items/' + id}><button className={s.btnMoreInformation} >Ver más</button></Link>
+                <Link to={'/items/' + id}><button className={s.btnMoreInformation}>Ver más</button></Link>
             </div>
         </div>
     )

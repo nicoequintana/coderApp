@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import s from '../Modules/itemList.module.css';
-import articles from '../Utils/products'
+import products from '../Utils/products'
 import ItemList from "../itemList/Itemlist";
 import { useParams } from "react-router-dom";
 
 function ItemListContainer () {
     const [loading, setLoading] = useState(true);
-    const [products, setProducts] = useState([]);
+    const [prods, setProds] = useState([]);
     const {category} = useParams()
 
     useEffect( () => {
@@ -23,14 +23,14 @@ function ItemListContainer () {
 
         const promiseProducts = new Promise((res, rej) => {
             setTimeout( () => {
-                res(articles);
+                res(products);
             }, 500);
         });
 
         if(category) {
-            promiseProducts.then(resp => setProducts(resp.filter(articles => articles.category === category)))
+            promiseProducts.then(resp => setProds(resp.filter(products => products.category === category)))
         } else {
-            promiseProducts.then(resp => setProducts(resp))
+            promiseProducts.then(resp => setProds(resp))
         }
 
         promiseProducts.catch(err => console.log(err));
@@ -42,7 +42,7 @@ function ItemListContainer () {
 
     return(
         <div className={s.itemListContainer}>
-            {loading ? <h1 className={s.loader}> Estamos cargando el sitio, <br /> por favor espera.</h1> :  <ItemList products={products} />}
+            {loading ? <h1 className={s.loader}> Estamos cargando el sitio, <br /> por favor espera.</h1> :  <ItemList products={prods} />}
 
         </div>
     )

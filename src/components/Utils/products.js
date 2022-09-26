@@ -1,4 +1,4 @@
-const articles = [
+const products = [
     {
         id: '1',
         name: 'iPhone 12 Pro',
@@ -197,4 +197,4 @@ const articles = [
 
 ]
 
-export default articles;
+export default products;
