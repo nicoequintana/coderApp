@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -7,8 +7,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import CartWidget from "./CartWidget";
 import NavLogo from "./NavLogo";
 import { Link } from "react-router-dom";
+import { CartContext } from "../../Context/CartContext";
 
 function NavBar({categories}) {
+
+  const{cart} = useContext(CartContext)
+
   return (
       <div className={s.navFixed} bg='black'>
         <Navbar bg="black" variant="dark" className='container-fluid'>
@@ -24,7 +28,9 @@ function NavBar({categories}) {
                 {categories.map(e => <li key={e.link + e.name}> <Link className={s.linkStyle} to={e.link}>{e.name}</Link> </li>)}
               </ul>
             </Nav>
-            <Link to={'/cart/'}><CartWidget /></Link>
+            {cart.length === 0
+            ? 
+            <div></div>:<Link to={'/cart/'}><CartWidget /></Link>}
           </Container>
         </Navbar>
       </div>

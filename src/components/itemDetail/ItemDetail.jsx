@@ -1,6 +1,5 @@
 import React, { useContext, useState } from 'react';
 import s from '../Modules/itemDetail.module.css';
-import e from '../Modules/count.module.css'
 import ItemCountContainer from '../Containers/ItemCountContainer';
 import { CartContext } from '../../Context/CartContext';
 import { Link } from 'react-router-dom';
@@ -53,7 +52,7 @@ function ItemDetail({product}) {
             <p>Precio: ${product.price}</p>
             <p>Stock Disponible: {product.stock}</p>
             <p>{product.description}</p>
-            {validateShopping ? <Link to={'/cart'}><button className={e.btnGoToCart}>Ir a tu carrito de compras.</button></Link> : <ItemCountContainer onAdd={onAdd} stock={product.stock} initial={1}/>}
+            {validateShopping ? <Link className={s.linkStyle} to={'/cart'}><button className={s.btnGoToCart}>Terminar compra.</button></Link> : <ItemCountContainer onAdd={onAdd} stock={product.stock} initial={1}/>}
           </div>
         </div>
     </div>

@@ -1,17 +1,23 @@
 import React, { useContext } from 'react'
 import { CartContext } from '../../Context/CartContext';
 import s from '../Modules/cart.module.css'
+import EmptyCart from './EmptyCart';
 
 function Cart() {
 
-  const {cart, totalProducts, deleteAll, deleteOne, finalPrice} = useContext(CartContext)
-  console.log(cart)
+  const {cart, totalProducts, deleteAll, deleteOne, finalPrice} = useContext(CartContext);
+  
+  console.log(cart.length)
   console.log(cart.image)
 
   return (
     <div className={s.cartSiteStyle}>
+      {cart.length === 0 
+      ?
+      <EmptyCart />
+      :
+      <>
       <div className={s.productsListContainer}>
-      {/* uso .map para generar una card por cada producto que vaya sumando al carrito */}
         {cart.map(e =>
           <div className={s.productContainer}>
             <div>
@@ -35,6 +41,7 @@ function Cart() {
           <span>Monto total a pagar: {finalPrice()}</span>
           <button onClick={deleteAll}>Eliminar Carrito</button>
       </div>
+      </>}
     </div>
 
   )

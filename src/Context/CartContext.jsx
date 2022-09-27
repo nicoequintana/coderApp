@@ -11,7 +11,7 @@ const CartProvider = (props) => {
         const product = {...item, cant};
         
         if(isInCart(product.id)) {
-            console.log('entro la funcion como si ya hubiese algo')
+            //console.log('entro la funcion como si ya hubiese algo')
             sumarCantidad(product)
         } else {
             setCart([...cart, product])
@@ -49,7 +49,7 @@ const CartProvider = (props) => {
     const deleteOne = (id) => {
         let cartCopy = [...cart]
         const cartUpdate = cartCopy.filter((e) => e.id !== id);
-        console.log(cartUpdate)
+        //console.log(cartUpdate)
         setCart(cartUpdate)
     }
 
@@ -61,7 +61,7 @@ const CartProvider = (props) => {
             totalCount += e.cant
         })
 
-        console.log(totalCount)
+        //console.log(totalCount)
         return totalCount;
         
     }
@@ -74,7 +74,7 @@ const CartProvider = (props) => {
         cartCopy.forEach((e)=>{
             totalPrice += e.price * e.cant
         })
-        console.log(totalPrice)
+        //console.log(totalPrice)
         return totalPrice
     }
 

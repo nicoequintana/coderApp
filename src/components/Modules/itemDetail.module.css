@@ -51,6 +51,10 @@
     border: 1px solid black;
     border-radius: 5px;
     padding: 8px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-direction: column;
 
 }
 
@@ -62,4 +66,17 @@
 .itemDetail_descriptionContent  p{
     font-size: 15px;
     margin-bottom: 8px;
+}
+
+.linkStyle{
+    align-self: center;
+}
+
+.btnGoToCart{
+    width: auto;
+    padding: 5px;
+    background: rgb(27, 113, 37);
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    border: none;
 }
