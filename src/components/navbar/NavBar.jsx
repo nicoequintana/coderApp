@@ -6,7 +6,7 @@ import s from '../Modules/navbar.module.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CartWidget from "./CartWidget";
 import NavLogo from "./NavLogo";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { CartContext } from "../../Context/CartContext";
 
 function NavBar({categories}) {
@@ -18,10 +18,10 @@ function NavBar({categories}) {
         <Navbar bg="black" variant="dark" className='container-fluid'>
           <Container>
             <Navbar.Brand className={s.navbarBrand}> 
-              <Link className={s.linkStyle} to={'/'}>
+              <NavLink className={s.linkStyle} to={'/'}>
                 <NavLogo /> 
                 <span className={s.logoText}>iStore</span>
-              </Link>  
+              </NavLink>  
             </Navbar.Brand>
             <Nav>
               <ul className={s.navListStyle}>

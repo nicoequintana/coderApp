@@ -49,7 +49,7 @@ function ItemDetail({product}) {
             <p>Id: {product.id}</p>
             <p>Color: {product.color}</p>
             <p>Capacidad: {product.storage}</p>
-            <p>Precio: ${product.price}</p>
+            <p>Precio: usd{product.price}</p>
             <p>Stock Disponible: {product.stock}</p>
             <p>{product.description}</p>
             {validateShopping ? <Link className={s.linkStyle} to={'/cart'}><button className={s.btnGoToCart}>Terminar compra.</button></Link> : <ItemCountContainer onAdd={onAdd} stock={product.stock} initial={1}/>}

@@ -7,8 +7,8 @@ function Cart() {
 
   const {cart, totalProducts, deleteAll, deleteOne, finalPrice} = useContext(CartContext);
   
-  console.log(cart.length)
-  console.log(cart.image)
+  //console.log(cart.length)
+  //console.log(cart.image)
 
   return (
     <div className={s.cartSiteStyle}>
@@ -38,7 +38,7 @@ function Cart() {
       <div className={s.lineBottom}></div>
       <div className={s.cartActions}>
           <span>Total de productos: {totalProducts()}</span>
-          <span>Monto total a pagar: {finalPrice()}</span>
+          <span>Monto total a pagar: usd{finalPrice()}</span>
           <button onClick={deleteAll}>Eliminar Carrito</button>
       </div>
       </>}
