@@ -1,5 +1,7 @@
 import React, { useContext } from 'react'
+import { Link } from 'react-router-dom';
 import { CartContext } from '../../Context/CartContext';
+import Checkout from '../checkout/Checkout';
 import s from '../Modules/cart.module.css'
 import EmptyCart from './EmptyCart';
 
@@ -12,36 +14,34 @@ function Cart() {
 
   return (
     <div className={s.cartSiteStyle}>
-      {cart.length === 0 
-      ?
-      <EmptyCart />
-      :
-      <>
-      <div className={s.productsListContainer}>
-        {cart.map(e =>
-          <div className={s.productContainer}>
-            <div>
-              <img className={s.cartProductImg} alt='Imagen del producto seleccionado' src={e.image}/>
+      {cart.length === 0 ? <EmptyCart /> :
+      <div>
+        <div className={s.productsListContainer}>
+          {cart.map(e =>
+            <div className={s.productContainer}>
+              <div>
+                <img className={s.cartProductImg} alt='Imagen del producto seleccionado' src={e.image}/>
+              </div>
+              <div className={s.cartProductInfo}>
+                <h3>{e.name}</h3>
+                <p>${e.price}</p>
+                <p>color: {e.color}</p>
+                <p>Estas llevando: {e.cant} u.</p>
+              </div>
+              <div className={s.cartProductActions}>
+                <button onClick={()=>{deleteOne(e.id)}}>Eliminar</button>
+              </div>
             </div>
-            <div className={s.cartProductInfo}>
-              <h3>{e.name}</h3>
-              <p>${e.price}</p>
-              <p>color: {e.color}</p>
-              <p>Estas llevando: {e.cant} u.</p>
-            </div>
-            <div className={s.cartProductActions}>
-              <button onClick={()=>{deleteOne(e.id)}}>Eliminar</button>
-            </div>
-          </div>
-        )}
-      </div>
-      <div className={s.lineBottom}></div>
-      <div className={s.cartActions}>
+          )}
+        </div>
+        <div className={s.lineBottom}></div>
+        <div className={s.cartActions}>
           <span>Total de productos: {totalProducts()}</span>
           <span>Monto total a pagar: usd{finalPrice()}</span>
           <button onClick={deleteAll}>Eliminar Carrito</button>
-      </div>
-      </>}
+        </div>
+        <Link to='/checkout/'><button>Finalizar compra</button></Link>
+      </div>}
     </div>
 
   )

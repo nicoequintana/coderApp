@@ -19,6 +19,7 @@ function ItemDetail({product}) {
     
   }
 
+ 
 
 
   //console.log(`ahora el estado cantidad vale= ${cantidad}`)
