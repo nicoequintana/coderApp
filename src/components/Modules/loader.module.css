@@ -1,0 +1,21 @@
+.loaderContainer{
+    width: 100%;
+    height: calc(100vh - 50px);
+    background-color: black;
+}
+
+.loader{
+    width: 300px;
+    height: auto;
+    padding: 15px;
+    font-size: 15px;
+    position: absolute;
+    top: 15rem;
+    left: calc(50% - 150px);
+    color: white;
+    text-align: center;
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+    line-height: 1.7;
+    box-shadow: 0 0 5px whitesmoke;
+}

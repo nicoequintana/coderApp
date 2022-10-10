@@ -1,9 +1,66 @@
 .formCheckoutSite{
-    width: 80%;
-    height: 100vh;
+    height: calc(100vh - 50px);
     margin: 0 auto;
     padding: 5rem;
-    background-color: lightblue;
+    background: rgb(208,208,208);
+    background: radial-gradient(circle, rgba(208,208,208,1) 0%, rgba(114,114,114,1) 100%);
+    border-radius: 10px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
 
+.formContainer{
+    border: 1px solid rgb(255, 255, 255);
+    width: auto;
+    height: fit-content;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.21);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 0 8px white;
+}
 
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.formDates{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.formDates label{
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.formDates input{
+    border: none;
+    border-radius: 5px;
+    padding: 4px 8px;
+}
+
+.formDatesBtn{
+    background-color: rgb(180, 235, 172);
+    border: none;
+    border-radius: 5px;
+    box-shadow: -3px 3px 8px rgb(76, 76, 76);
+    padding: 3px 8px;
+    color: green;
+    font-weight: bold;
+    transition: all ease-in-out .2s;
+}
+
+.formDatesBtn:hover{
+    background-color: green;
+    box-shadow: -3px -3px 8px rgb(76, 76, 76);
+    color: rgb(180, 235, 172);
 }

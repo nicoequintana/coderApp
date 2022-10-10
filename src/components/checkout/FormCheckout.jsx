@@ -28,28 +28,24 @@ function FormCheckout({handleId}) {
             
     }
 
-    const err = () => {
-        console.log('no hay nada')
-    }
-
   return (
     <div className={s.formCheckoutSite}>
-        <div>
+        <div className={s.formContainer}>
             <form>
-                <div>
+                <div className={s.formDates}>
                     <label for='nombre'>Nombre</label>
                     <input type='text' id='nombre' placeholder='Como te llamas?' onInput={(e) => setNombre(e.target.value)}/>
                 </div>
-                <div>
+                <div className={s.formDates}>
                     <label for='mail'>Mail</label>
                     <input type='text' id='apellido' placeholder='Dejanos tu mail' onInput={(e) => setMail(e.target.value)}/>
                 </div>
-                <div>
+                <div className={s.formDates}>
                     <label for='telefono'>Telefono</label>
                     <input type='text' id='telefono' placeholder='y tu numero de contacto?' onInput={(e) => setTelefono(e.target.value)}/>
                 </div>
-                <div>
-                    <button type='button' onClick={sendOrder}>Generar Orden</button>
+                <div className={s.formDates}>
+                    <button type='button' className={s.formDatesBtn} onClick={sendOrder}>Generar Orden</button>
                 </div>
             </form>
         </div>

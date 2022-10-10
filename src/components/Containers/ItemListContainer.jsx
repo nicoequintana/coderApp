@@ -5,6 +5,7 @@ import s from '../Modules/itemList.module.css';
 //import products from '../Utils/products'
 import ItemList from "../itemList/Itemlist";
 import { useParams } from "react-router-dom";
+import Loader from "../Loader";
 
 function ItemListContainer () {
     const [loading, setLoading] = useState(true);
@@ -28,7 +29,7 @@ function ItemListContainer () {
 
     return(
         <div className={s.itemListContainer}>
-            {loading ? <h1 className={s.loader}> Estamos cargando el sitio, <br /> por favor espera.</h1> :  <ItemList products={prods} />}
+            {loading ? <Loader /> :  <ItemList products={prods} />}
         </div>
     )
 }

@@ -1,7 +1,6 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom';
 import { CartContext } from '../../Context/CartContext';
-import Checkout from '../checkout/Checkout';
 import s from '../Modules/cart.module.css'
 import EmptyCart from './EmptyCart';
 
@@ -38,9 +37,9 @@ function Cart() {
         <div className={s.cartActions}>
           <span>Total de productos: {totalProducts()}</span>
           <span>Monto total a pagar: usd{finalPrice()}</span>
-          <button onClick={deleteAll}>Eliminar Carrito</button>
+          <button className={s.deleteAllBtn} onClick={deleteAll}>Eliminar Carrito</button>
+          <Link to='/checkout/'><button className={s.checkoutBtn}>Finalizar compra</button></Link>
         </div>
-        <Link to='/checkout/'><button>Finalizar compra</button></Link>
       </div>}
     </div>
 

@@ -92,9 +92,9 @@ p{
     font-size: 15px;
     font-weight: bold;
 }
-.cartActions button{
+.deleteAllBtn{
     width: auto;
-    height: 25px;
+    height: auto;
     padding: 3px 5px;
     margin-left: 20px;
     background-color: transparent;
@@ -103,6 +103,11 @@ p{
     line-height: 1.2;
     font-weight: bold;
     color: red;
+}
+
+.deleteAllBtn:hover{
+    border-top: 1px solid red;
+    border-bottom: 1px solid red;
 }
 
 .emptyCart{
@@ -146,11 +151,25 @@ p{
 
 .emptyCartWarning button:hover{
     background-color: rgb(78, 172, 78);
-
 }
 
 .emptyCartWarning button:hover .linkStyle{
     color: whitesmoke;
+}
 
+.checkoutBtn{
+    background-color: rgb(180, 235, 172);
+    border: none;
+    border-radius: 5px;
+    box-shadow: -3px 3px 8px rgb(76, 76, 76);
+    padding: 3px 8px;
+    color: green;
+    font-weight: bold;
+    transition: all ease-in-out .2s;
+}
 
+.checkoutBtn:hover{
+    background-color: green;
+    box-shadow: -3px -3px 8px rgb(76, 76, 76);
+    color: rgb(180, 235, 172);
 }
